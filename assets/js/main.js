@@ -11,13 +11,13 @@ va applicato uno sconto del 40% per gli over 65.
 const numbers_km = prompt("quanti chilometri devi percorrere?");
 console.log(numbers_km)
 
-document.getElementById('numbers_km').innerHTML = '50 km'
+document.getElementById('numbers_km').innerHTML = numbers_km
 
 //età del passeggero
 const user_age = prompt ("quanti anni hai?");
 console.log(user_age)
 
-document.getElementById('user_age').innerHTML = '70 anni'
+document.getElementById('user_age').innerHTML = user_age
 
 // sconto per over 65
 
