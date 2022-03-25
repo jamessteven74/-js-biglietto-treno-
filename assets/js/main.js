@@ -13,14 +13,14 @@ va applicato uno sconto del 40% per gli over 65.
 const numbers_km = parseInt(prompt("quanti chilometri devi percorrere?"));
 console.log(numbers_km)
 //50 km
-document.getElementById('numbers_km').innerHTML = numbers_km;
+
 
 
 //età del passeggero
 const user_age = parseInt(prompt ("quanti anni hai?"));
 console.log(user_age)
 //70 anni
-document.getElementById('user_age').innerHTML = user_age;
+
 
 
 //costo del biglietto
@@ -31,7 +31,7 @@ const prezzo_standard = numbers_km * price_km;
 console.log(prezzo_standard)
 
 //prezzo per over 65
-const prezzo_over_65 = prezzo_standard - (prezzo_standard * 0,4)
+const prezzo_over_65 = prezzo_standard - (prezzo_standard * 0.4)
 console.log(prezzo_over_65)
 
 //prezzo per minorenne
@@ -39,12 +39,15 @@ const prezzo_minorenne = prezzo_standard - (prezzo_standard * 0.2)
 console.log(prezzo_minorenne)
 
 if (user_age < 18){
-    prezzo_minorenne
+    
+    document.getElementById("prezzo_del_biglietto").innerHTML = prezzo_minorenne.toFixed(2)
 
 } else if (user_age > 65){
-    prezzo_over_65
+    document.getElementById("prezzo_del_biglietto").innerHTML = prezzo_over_65.toFixed(2)
+    
+} else {
+    document.getElementById("prezzo_del_biglietto").innerHTML = prezzo_standard.toFixed(2)
 }
-
 
 
 
